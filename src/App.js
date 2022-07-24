@@ -38,7 +38,6 @@ function App() {
       localStorage.removeItem(key);
       window.alert("You have to login again");
       
-      // window.location.replace("/");
       navigate("/");
       return null;
     }
@@ -51,15 +50,10 @@ function App() {
   function setf(data) {
     setC(data);
   }
-  // console.log("in app",Clist);
 
   return (
     <>
       <div className="App">
-        {/* <Router> */}
-          {/* <NavLink to="/" />
-          <NavLink to="/signin" />
-          <NavLink to="/signup" /> */}
           <Routes>
             <Route path="/" element={<Home fun={setf} />} />
             <Route  path="/signin" element={<Signin />} />
@@ -76,7 +70,6 @@ function App() {
               element={<Setpassword />}
             />
           </Routes>
-        {/* </Router> */}
       </div>
     </>
   );

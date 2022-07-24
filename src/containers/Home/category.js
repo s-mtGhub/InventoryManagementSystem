@@ -17,7 +17,7 @@ const showPro=async(id,indx)=>{
     let indX = localStorage.getItem('index');
     if(!indX)
     {setcatOP(true);
-    }
+    }  
     else if(indx==JSON.parse(indX))
     {
         console.log(JSON.parse(indX));
@@ -28,8 +28,8 @@ const showPro=async(id,indx)=>{
    }
    localStorage.setItem('index',indx);
     // if(indX!=indx)
-   indX=indx;
-        
+   indX=indx; 
+              
         try{
             if(!catOP)return;
            const res = await axios.post(
@@ -45,8 +45,6 @@ const showPro=async(id,indx)=>{
         }catch(e){
             console.log(e);
         }
-
-
     }
 
   return (     

@@ -4,6 +4,7 @@ import { Container } from "react-bootstrap";
 import "../../App.css";
 import Layout from "../../components/Layout";
 import Category from "./category";
+import Oop from "../../photos/oops.png"
 // import Category from "./category";
 
 export default function Home(props) {
@@ -54,32 +55,37 @@ export default function Home(props) {
           <Container>
             <h1>Product Details</h1>
             <div className="contained">
-                     
-            {
-              pdata.map((p) => {
-              return (      
-                <>
-                  <div     className="productAtHome">
-                    <h4>{p.name}</h4>
-                    <p>
-                      <b>Price</b>
-                      <br />
-                      {p.price}
-                    </p>
-                    <p>
-                      <b>Quantity</b>
-                      <br />
-                      {p.quantity}
-                    </p>
-                    <p>
-                      <b>Description</b>
-                      <br />
-                      {p.description}
-                    </p>
-                  </div>
-                </>
-              );
-            })}
+              {pdata.length > 0 ? null : (
+                <img               
+                  src={Oop}
+                  style={{ width: "30vw" }}
+                />
+              )}
+
+              {pdata.map((p) => {
+                return (
+                  <>
+                    <div className="productAtHome">
+                      <h4>{p.name}</h4>
+                      <p>
+                        <b>Price</b>
+                        <br />
+                        {p.price}
+                      </p>
+                      <p>
+                        <b>Quantity</b>
+                        <br />
+                        {p.quantity}
+                      </p>
+                      <p>
+                        <b>Description</b>
+                        <br />
+                        {p.description}
+                      </p>
+                    </div>
+                  </>
+                );
+              })}
             </div>
           </Container>
         </div>
