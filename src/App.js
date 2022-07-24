@@ -38,12 +38,8 @@ function App() {
       localStorage.removeItem(key);
       window.alert("You have to login again");
       
-        // window.location.replace(
-        //   "https://riderghub.github.io/InventoryManagementSystem/"
-        // );
       // window.location.replace("/");
       navigate("/");
-      // window.location.href("/");
       return null;
     }
     return item.value;

@@ -91,9 +91,6 @@ export default function Header(props) {
                               return;
                             localStorage.clear();
 
-                            // window.location.replace(
-                            //   "https://riderghub.github.io/InventoryManagementSystem/"
-                            // );
                             // window.location.replace("/");
                             navigate("/");
                           }}
