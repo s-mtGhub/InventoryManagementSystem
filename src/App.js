@@ -20,7 +20,6 @@ import DeletePro from "./product/deletePro";
 
 
 function App() {
-  const navigate=useNavigate();
   function getWithExpiry(key = "User") {
     const itemStr = localStorage.getItem(key);   
     // if the item doesn't exist, return null
