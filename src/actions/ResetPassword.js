@@ -3,8 +3,10 @@ import Layout from '../components/Layout';
 import { Container,Row,Form,Col,Button } from 'react-bootstrap';
 import Input from '../components/UI/Input';
 import axios from 'axios';
+import { useNavigate } from 'react-router-dom';
 
 export default function ResetPassword(props){
+  let navigate=useNavigate();
   const [mess, setmess] = useState("");
   // const [Log, setlog] = useState([]);
 
@@ -38,7 +40,7 @@ export default function ResetPassword(props){
           setmess(res.data.message);
           return;
         }
-        window.location.assign("/");
+        navigate("/");
         console.log(res.rsponse);
       })
       .catch((error) => {

@@ -49,7 +49,7 @@ axios
       setmess(res.data.message);
       return;
     }
-    navigate("/signin");
+    navigate("/");
     console.log(res.rsponse);
   })
   .catch((error) => {
