@@ -2,7 +2,7 @@
   "name": "client",
   "version": "0.1.0",
   "private": true,
-  "homepage": "https://riderGhub.github.io/InventoryManagementSystem",
+  "homepage": "https://riderGhub.github.io/InventoryManagementSystem/",
   "dependencies": {
     "@mui/icons-material": "^5.8.4",
     "@testing-library/jest-dom": "^5.16.4",

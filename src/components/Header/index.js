@@ -1,8 +1,11 @@
 import React, { useEffect, useState } from "react";
 import { Navbar, Nav, Container, NavDropdown } from "react-bootstrap";
-import { NavLink, Link } from "react-router-dom";
+import { NavLink, Link ,useNavigate} from "react-router-dom";
 import "../../App.css"
+
+
 export default function Header(props) {
+  const navigate=useNavigate();
   const [catOP, setcatOP] = useState(false);
   const setcatOPfun = () => {
     setcatOP(!catOP);
@@ -79,8 +82,10 @@ export default function Header(props) {
                         <div>Update Product</div> */}
                         <div
                           onClick={() => {
+                            if(!window.confirm("Are you sure to Log-Out"))return;
                             localStorage.clear();
-                            window.location.replace("/signin");
+                            window.location.replace("/");
+                            // navigate("/");
                           }}
                         >
                           Logout

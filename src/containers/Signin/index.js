@@ -2,14 +2,14 @@ import React, { useState } from "react";
 import { Container, Form, Button, Row, Col } from "react-bootstrap";
 import Layout from "../../components/Layout";
 import Input from "../../components/UI/Input";
-import { HashRouter, Link, Route, Router } from "react-router-dom";
+import { Link ,useNavigate} from "react-router-dom";
 import ResetPassword from "../../actions/ResetPassword";
 import axios from "axios";
 
 export default function Signin(props) {
   const [mess, setmess] = useState("");
   // const [Log, setlog] = useState([]);
-
+ const navigate=useNavigate();
   const [email, setemail] = useState("");
   const [password, setpass] = useState("");
   function sete(e) {
@@ -54,7 +54,9 @@ export default function Signin(props) {
           setmess(res.data.message);
           return;
         }
-        window.location.assign("/");
+        window.location.replace("/");
+        // navigate("/");
+        // window.location.href("/");
         console.log(res.rsponse);
       })
       .catch((error) => {

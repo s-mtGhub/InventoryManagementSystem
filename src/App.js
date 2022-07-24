@@ -5,6 +5,7 @@ import {
   NavLink,
   Route,
   Routes,
+  useNavigate,
 } from "react-router-dom";
 import Home from "./containers/Home";
 import Signin from "./containers/Signin";
@@ -17,7 +18,9 @@ import UpdateProduct from "./containers/User/UpdateProduct";
 import UpdatePro from "./product/updatePro";
 import DeletePro from "./product/deletePro";
 
+
 function App() {
+  const navigate=useNavigate();
   function getWithExpiry(key = "User") {
     const itemStr = localStorage.getItem(key);   
     // if the item doesn't exist, return null
@@ -34,7 +37,9 @@ function App() {
       // and return null
       localStorage.removeItem(key);
       window.alert("You have to login again");
-      window.location.replace("/signin");
+      window.location.replace("/");
+      // navigate("/");
+      // window.location.href("/");
       return null;
     }
     return item.value;
@@ -52,11 +57,14 @@ function App() {
     <>
       <div className="App">
         <Router>
+          {/* <NavLink to="/" />
+          <NavLink to="/signin" />
+          <NavLink to="/signup" /> */}
           <Routes>
-            <Route exact path="/" element={<Home fun={setf} />} />
-            <Route path="/signin" element={<Signin />} />
-            <Route path="/signup" element={<Signup />} />
-            <Route path="reset-password" element={<ResetPassword />} />
+            <Route path="/" element={<Home fun={setf} />} />
+            <Route  path="/signin" element={<Signin />} />
+            <Route  path="/signup" element={<Signup />} />
+            <Route path="/reset-password" element={<ResetPassword />} />
             <Route path="/user/profile" element={<Profile />} />
             <Route path="/user/update-category" element={<UpdateCategory />} />
             <Route path="/user/update-product" element={<UpdateProduct />} />
