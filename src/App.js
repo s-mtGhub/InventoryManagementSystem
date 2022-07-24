@@ -38,7 +38,7 @@ function App() {
       window.alert("You have to login again");
       
         window.location.replace(
-          "https://riderghub.github.io/"
+          "https://riderghub.github.io/InventoryManagementSystem/"
         );
       // window.location.replace("/");
       // navigate("/");

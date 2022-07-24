@@ -92,7 +92,7 @@ export default function Header(props) {
                             localStorage.clear();
 
                             window.location.replace(
-                              "https://riderghub.github.io/"
+                              "https://riderghub.github.io/InventoryManagementSystem/"
                             );
                             // window.location.replace("/");
                             // navigate("/");
