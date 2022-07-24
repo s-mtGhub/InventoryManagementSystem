@@ -1,7 +1,7 @@
 import "./App.css";
 import React, { useState } from "react";
 import {
-  HashRouter as Router,
+  BrowserRouter as Router,
   NavLink,
   Route,
   Routes,
@@ -20,6 +20,7 @@ import DeletePro from "./product/deletePro";
 
 
 function App() {
+  let navigate=useNavigate();
   function getWithExpiry(key = "User") {
     const itemStr = localStorage.getItem(key);   
     // if the item doesn't exist, return null
@@ -37,11 +38,11 @@ function App() {
       localStorage.removeItem(key);
       window.alert("You have to login again");
       
-        window.location.replace(
-          "https://riderghub.github.io/InventoryManagementSystem/"
-        );
+        // window.location.replace(
+        //   "https://riderghub.github.io/InventoryManagementSystem/"
+        // );
       // window.location.replace("/");
-      // navigate("/");
+      navigate("/");
       // window.location.href("/");
       return null;
     }
@@ -59,7 +60,7 @@ function App() {
   return (
     <>
       <div className="App">
-        <Router>
+        {/* <Router> */}
           {/* <NavLink to="/" />
           <NavLink to="/signin" />
           <NavLink to="/signup" /> */}
@@ -79,7 +80,7 @@ function App() {
               element={<Setpassword />}
             />
           </Routes>
-        </Router>
+        {/* </Router> */}
       </div>
     </>
   );

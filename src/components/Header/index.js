@@ -4,7 +4,7 @@ import { NavLink, Link, useNavigate } from "react-router-dom";
 import "../../App.css";
 
 export default function Header(props) {
-  const navigate = useNavigate();
+  let navigate = useNavigate();
   const [catOP, setcatOP] = useState(false);
   const setcatOPfun = () => {
     setcatOP(!catOP);
@@ -91,14 +91,14 @@ export default function Header(props) {
                               return;
                             localStorage.clear();
 
-                            window.location.replace(
-                              "https://riderghub.github.io/InventoryManagementSystem/"
-                            );
+                            // window.location.replace(
+                            //   "https://riderghub.github.io/InventoryManagementSystem/"
+                            // );
                             // window.location.replace("/");
-                            // navigate("/");
+                            navigate("/");
                           }}
                         >
-                          Logout
+                          Logout   
                         </div>
                       </div>
                     </div>

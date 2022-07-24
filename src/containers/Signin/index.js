@@ -9,7 +9,7 @@ import axios from "axios";
 export default function Signin(props) {
   const [mess, setmess] = useState("");
   // const [Log, setlog] = useState([]);
- const navigate=useNavigate();
+  let navigate=useNavigate();
   const [email, setemail] = useState("");
   const [password, setpass] = useState("");
   function sete(e) {
@@ -54,10 +54,11 @@ export default function Signin(props) {
           setmess(res.data.message);
           return;
         }
-        window.location.replace(
-          "https://riderghub.github.io/InventoryManagementSystem/"
-        );
-        // navigate("/");
+        // window.location.replace(
+        //   "https://riderghub.github.io/InventoryManagementSystem/"
+        // );
+        // window.location.replace("/");
+        navigate("/");
         // window.location.href("/");
         console.log(res.rsponse);
       })
