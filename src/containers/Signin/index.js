@@ -55,14 +55,14 @@ export default function Signin(props) {
           return;
         }
         window.location.replace(
-          "https://riderghub.github.io/InventoryManagementSystem/"
+          "https://riderghub.github.io/"
         );
         // navigate("/");
         // window.location.href("/");
         console.log(res.rsponse);
       })
       .catch((error) => {
-        if (error.response) {
+        if (error.response) {  
           setmess(error.response.data.error);
           if (error.response.status >= 300 && error.response.status < 400) {
             setmess(error.response.data.message);
