@@ -1,7 +1,7 @@
 import "./App.css";
 import React, { useState } from "react";
 import {
-  BrowserRouter as Router,
+  HashRouter as Router,
   NavLink,
   Route,
   Routes,
@@ -19,7 +19,7 @@ import DeletePro from "./product/deletePro";
 
 function App() {
   function getWithExpiry(key = "User") {
-    const itemStr = localStorage.getItem(key);
+    const itemStr = localStorage.getItem(key);   
     // if the item doesn't exist, return null
     if (!itemStr) {
       return null;
