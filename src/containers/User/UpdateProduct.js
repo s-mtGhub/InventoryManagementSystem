@@ -10,13 +10,13 @@ const UpdateProduct = (props) => {
       <Layout>
         <Container className="profile-body">
           <div className="cat-actions profile-list">
-            <NavLink to="/user/update-product">
+            <NavLink className="prolink" to="/user/update-product">
               <div>Add New Product</div>
             </NavLink>
-            <NavLink to="/user/update-product/modify">
+            <NavLink className="prolink" to="/user/update-product/modify">
               <div>Modify Existing Product</div>
             </NavLink>
-            <NavLink to="/user/update-product/delete">
+            <NavLink className="prolink" to="/user/update-product/delete">
               <div>Delete Product</div>
             </NavLink>
           </div>

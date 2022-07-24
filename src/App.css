@@ -46,10 +46,10 @@
   background-color: rgb(145, 137, 137);
   list-style-type: none;  
 }
-/* .container{
-  height: 70vh;
-  overflow-y: scroll;
-} */
+
+.prolink{
+  text-decoration: none;
+}
 .home-body{
   display: flex;
   flex-direction: row;

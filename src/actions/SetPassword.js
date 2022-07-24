@@ -3,12 +3,12 @@ import Layout from '../components/Layout';
 import { Container,Row,Form,Col,Button } from 'react-bootstrap';
 import Input from '../components/UI/Input';
 import axios from 'axios';
-import { useParams } from 'react-router-dom';
+import { useNavigate, useParams } from 'react-router-dom';
 import { LaptopWindows } from '@material-ui/icons';
 
 
 const Setpassword=()=>{
-
+  let navigate=useNavigate();
    const [mess, setmess] = useState("");
    let {id,token}=useParams();
 //   let id=id.params;
@@ -49,7 +49,7 @@ axios
       setmess(res.data.message);
       return;
     }
-    window.location.replace("/signin");
+    navigate("/signin");
     console.log(res.rsponse);
   })
   .catch((error) => {

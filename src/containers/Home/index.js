@@ -54,12 +54,12 @@ export default function Home(props) {
           <Container>
             <h1>Product Details</h1>
             <div className="contained">
-                  
+                     
             {
               pdata.map((p) => {
               return (      
                 <>
-                  <div className="productAtHome">
+                  <div     className="productAtHome">
                     <h4>{p.name}</h4>
                     <p>
                       <b>Price</b>
