@@ -37,7 +37,11 @@ function App() {
       // and return null
       localStorage.removeItem(key);
       window.alert("You have to login again");
-      window.location.replace("/");
+      
+        window.location.replace(
+          "https://riderghub.github.io/InventoryManagementSystem/"
+        );
+      // window.location.replace("/");
       // navigate("/");
       // window.location.href("/");
       return null;

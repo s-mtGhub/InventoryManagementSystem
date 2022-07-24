@@ -54,7 +54,9 @@ export default function Signin(props) {
           setmess(res.data.message);
           return;
         }
-        window.location.replace("/");
+        window.location.replace(
+          "https://riderghub.github.io/InventoryManagementSystem/"
+        );
         // navigate("/");
         // window.location.href("/");
         console.log(res.rsponse);

@@ -1,11 +1,10 @@
 import React, { useEffect, useState } from "react";
 import { Navbar, Nav, Container, NavDropdown } from "react-bootstrap";
-import { NavLink, Link ,useNavigate} from "react-router-dom";
-import "../../App.css"
-
+import { NavLink, Link, useNavigate } from "react-router-dom";
+import "../../App.css";
 
 export default function Header(props) {
-  const navigate=useNavigate();
+  const navigate = useNavigate();
   const [catOP, setcatOP] = useState(false);
   const setcatOPfun = () => {
     setcatOP(!catOP);
@@ -69,12 +68,18 @@ export default function Header(props) {
                           </NavLink>
                         </div>
                         <div>
-                          <NavLink className="update-link" to="/user/update-category">
+                          <NavLink
+                            className="update-link"
+                            to="/user/update-category"
+                          >
                             Update Category
                           </NavLink>
                         </div>
                         <div>
-                          <NavLink className="update-link" to="/user/update-product">
+                          <NavLink
+                            className="update-link"
+                            to="/user/update-product"
+                          >
                             Update Product
                           </NavLink>
                         </div>
@@ -82,9 +87,14 @@ export default function Header(props) {
                         <div>Update Product</div> */}
                         <div
                           onClick={() => {
-                            if(!window.confirm("Are you sure to Log-Out"))return;
+                            if (!window.confirm("Are you sure to Log-Out"))
+                              return;
                             localStorage.clear();
-                            window.location.replace("/");
+
+                            window.location.replace(
+                              "https://riderghub.github.io/InventoryManagementSystem/"
+                            );
+                            // window.location.replace("/");
                             // navigate("/");
                           }}
                         >
