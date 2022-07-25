@@ -47,6 +47,12 @@ export default function Signup() {
           password_confirmation: `${confirmpassword}`,
           username: `${username}`,
           contact: `${contact}`,
+        },
+        {
+          headers: {
+            "Access-Control-Allow-Origin": "*",
+            "Content-Type": "application/json",
+          },
         }
       )
       .then((res) => {

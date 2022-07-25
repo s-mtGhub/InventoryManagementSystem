@@ -44,11 +44,17 @@ const DeletePro = (props) => {
     }
     try {
       await axios
-        .post(link, action, {
-          headers: {
-            Authorization: `Bearer ${user.value.token}`,
-          },
-        })
+        .post(
+          link,
+          action,
+          {
+            headers: {
+              "Access-Control-Allow-Origin": "*",
+              "Content-Type": "application/json",
+              Authorization: `Bearer ${user.value.token}`,
+            },
+          }
+        )
         .then((res) => {
           if (res.status < 300) {
             console.log(res.data);

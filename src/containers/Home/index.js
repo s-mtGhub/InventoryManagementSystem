@@ -24,7 +24,13 @@ export default function Home(props) {
   const temp = async () => {
     try {
       const res = await axios.get(
-        "https://inventory-managementsystem.herokuapp.com/api/user/category/getcategory"
+        "https://inventory-managementsystem.herokuapp.com/api/user/category/getcategory",
+        {
+          headers: {
+            "Access-Control-Allow-Origin": "*",
+            "Content-Type": "application/json",
+          },
+        }
       );
 
       if (res.status < 300) {
@@ -94,7 +100,3 @@ export default function Home(props) {
   );
 }
 
-// <div
-//   className="product-item"
-//   style={{ display: catOP ? "block" : "none" }}
-// ></div>

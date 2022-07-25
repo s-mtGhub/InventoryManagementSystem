@@ -31,6 +31,12 @@ export default function ResetPassword(props){
         "https://inventory-managementsystem.herokuapp.com/api/user/sendresetpasswrodlink",
         {
           email: `${email}`,
+        },
+        {
+          headers: {
+            "Access-Control-Allow-Origin": "*",
+            "Content-Type": "application/json",
+          },
         }
       )
       .then((res) => {

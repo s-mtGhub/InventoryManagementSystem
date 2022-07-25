@@ -18,7 +18,13 @@ const CategoryList=(props)=>{
         setval();
        try {
          const res = await axios.get(
-           "https://inventory-managementsystem.herokuapp.com/api/user/category/getcategory"
+           "https://inventory-managementsystem.herokuapp.com/api/user/category/getcategory",
+           {
+             headers: {
+               "Access-Control-Allow-Origin": "*",
+               "Content-Type": "application/json",
+             },
+           }
          );
 
          if (res.status < 300) {

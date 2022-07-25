@@ -18,6 +18,12 @@ const ProductList=(props)=>{
           "https://inventory-managementsystem.herokuapp.com/api/user/list/product",
           {
             _id: id,
+          },
+          {
+            headers: {
+              "Access-Control-Allow-Origin": "*",
+              "Content-Type": "application/json",
+            },
           }
         );
 

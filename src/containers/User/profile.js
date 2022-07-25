@@ -67,6 +67,8 @@ const Profile = () => {
         },
         {
           headers: {
+            "Access-Control-Allow-Origin": "*",
+            "Content-Type": "application/json",
             Authorization: `Bearer ${user.value.token}`,
           },
         }
@@ -128,6 +130,8 @@ const Profile = () => {
         },
         {
           headers: {
+            "Access-Control-Allow-Origin": "*",
+            "Content-Type": "application/json",
             Authorization: `Bearer ${user.value.token}`,
           },
         }

@@ -39,6 +39,12 @@ axios
     {
       password: `${password}`,
       confirmPassword: `${confirmPassword}`,
+    },
+    {
+      headers: {
+        "Access-Control-Allow-Origin": "*",
+        "Content-Type": "application/json",
+      },
     }
   )
   .then((res) => {

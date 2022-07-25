@@ -45,6 +45,12 @@ export default function Signin(props) {
         {
           email: `${email}`,
           password: `${password}`,
+        },
+        {
+          headers: {
+            "Access-Control-Allow-Origin": "*",
+            "Content-Type": "application/json",
+          },
         }
       )
       .then((res) => {
@@ -61,13 +67,11 @@ export default function Signin(props) {
         console.log(res.rsponse);
       })
       .catch((error) => {
-        let data=error.response.data;
-        if (data.message) 
-          setmess(data.message);
-         else{
-            setmess(data.error);
-          }
-        
+        let data = error.response.data;
+        if (data.message) setmess(data.message);
+        else {
+          setmess(data.error);
+        }
       });  
   };
 

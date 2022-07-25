@@ -15,7 +15,7 @@ const CatAdd = (props) => {
     setname(e.target.value);
   }
   function seti(e) {
-    console.log(e.target.value);  
+    console.log(e.target.value);
     setimage(e.target.value);
   }
   const fun1 = (data) => {
@@ -30,7 +30,13 @@ const CatAdd = (props) => {
   const temp = async () => {
     try {
       const res = await axios.get(
-        "https://inventory-managementsystem.herokuapp.com/api/user/category/getcategory"
+        "https://inventory-managementsystem.herokuapp.com/api/user/category/getcategory",
+        {
+          headers: {
+            "Access-Control-Allow-Origin": "*",
+            "Content-Type": "application/json",
+          },
+        }
       );
 
       if (res.status < 300) {
@@ -90,6 +96,8 @@ const CatAdd = (props) => {
       await axios
         .post(link, action, {
           headers: {
+            "Access-Control-Allow-Origin": "*",
+            "Content-Type": "application/json",
             Authorization: `Bearer ${user.value.token}`,
           },
         })

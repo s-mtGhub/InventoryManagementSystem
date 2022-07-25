@@ -28,7 +28,7 @@ const CatBody = (props) => {
       setmess(D.message);
     }
   }
-   
+
   const catSub1 = async () => {
     let usrdata = localStorage.getItem("User");
     if (!usrdata) {
@@ -43,8 +43,11 @@ const CatBody = (props) => {
           name: `${name}`,
           createdBy: `${user.value.user_data._id}`,
         },
+
         {
           headers: {
+            "Access-Control-Allow-Origin": "*",
+            "Content-Type": "application/json",
             Authorization: `Bearer ${user.value.token}`,
           },
         }
@@ -68,7 +71,7 @@ const CatBody = (props) => {
       }
     }
   };
-  
+
   return (
     <>
       <h3 style={{ color: "red" }}>{mess}</h3>
@@ -76,7 +79,7 @@ const CatBody = (props) => {
         <>
           <h4 className="sticky">Add New Category</h4>
           <NewCat
-            setc={setc}   
+            setc={setc}
             seti={seti}
             name={name}
             image={image}
@@ -86,7 +89,13 @@ const CatBody = (props) => {
           />
         </>
       ) : (
-        <>{props.id == 2 ? <CatAdd id={2} dsp={true}/> : <CatAdd id={3} dsp={true}/>}</>
+        <>
+          {props.id == 2 ? (
+            <CatAdd id={2} dsp={true} />
+          ) : (
+            <CatAdd id={3} dsp={true} />
+          )}
+        </>
       )}
     </>
   );
