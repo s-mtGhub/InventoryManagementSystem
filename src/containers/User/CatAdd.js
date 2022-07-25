@@ -30,7 +30,7 @@ const CatAdd = (props) => {
   const temp = async () => {
     try {
       const res = await axios.get(
-        "https://inventory-managementsystem.herokuapp.com/api/user/category/getcategory",
+        "http://localhost:2222/api/user/category/getcategory",
         {
           headers: {
             "Access-Control-Allow-Origin": "*",
@@ -71,8 +71,7 @@ const CatAdd = (props) => {
 
     if (props.id == 2) {
       console.log("naam", name);
-      link =
-        "https://inventory-managementsystem.herokuapp.com/api/user/update/category";
+      link = "http://localhost:2222/api/user/update/category";
       action = {
         _id: `${cdata._id}`,
         name: `${name}`,
@@ -86,8 +85,7 @@ const CatAdd = (props) => {
         )
       )
         return;
-      link =
-        "https://inventory-managementsystem.herokuapp.com/api/user/remove/category";
+      link = "http://localhost:2222/api/user/remove/category";
       action = {
         _id: `${data._id}`,
       };

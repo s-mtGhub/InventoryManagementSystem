@@ -38,8 +38,7 @@ const DeletePro = (props) => {
         )
       )
         return;
-      link =
-        "https://inventory-managementsystem.herokuapp.com/api/user/remove/product";
+      link = "http://localhost:2222/api/user/remove/product";
       action = { _id: Pdata };
     }
     try {

@@ -28,7 +28,7 @@ export default function ResetPassword(props){
       
     axios
       .post(
-        "https://inventory-managementsystem.herokuapp.com/api/user/sendresetpasswrodlink",
+        "http://localhost:2222/api/user/sendresetpasswrodlink",
         {
           email: `${email}`,
         },

@@ -67,7 +67,7 @@ const UpdatePro = (props) => {
     if (!window.confirm("Are you sure to update Product")) return;
     try {
       let res = await axios.post(
-        "https://inventory-managementsystem.herokuapp.com/api/user/update/product",
+        "http://localhost:2222/api/user/update/product",
         {
           _id: Pdata,
           name: name,

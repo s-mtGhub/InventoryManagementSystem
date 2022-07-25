@@ -41,7 +41,7 @@ export default function Signin(props) {
   const LoginSub = () => {
     axios
       .post(
-        "https://inventory-managementsystem.herokuapp.com/api/user/login",
+        "http://localhost:2222/api/user/login",
         {
           email: `${email}`,
           password: `${password}`,

@@ -38,7 +38,7 @@ export default function Signup() {
   const RegisterSub = async () => {
     axios
       .post(
-        "https://inventory-managementsystem.herokuapp.com/api/user/register",
+        "http://localhost:2222/api/user/register",
         {
           firstname: `${firstname}`,
           lastname: `${lastname}`,

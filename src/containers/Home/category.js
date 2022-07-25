@@ -33,7 +33,7 @@ const showPro=async(id,indx)=>{
         try{
             if(!catOP)return;
            const res = await axios.post(
-             "https://inventory-managementsystem.herokuapp.com/api/user/list/product",
+             "http://localhost:2222/api/user/list/product",
              {
                _id: id,
              },
@@ -44,6 +44,7 @@ const showPro=async(id,indx)=>{
                },
              }
            );
+          
            if(res.status<300){
             if(res.data)
             setProfun(res.data);

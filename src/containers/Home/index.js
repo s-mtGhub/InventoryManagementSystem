@@ -24,7 +24,7 @@ export default function Home(props) {
   const temp = async () => {
     try {
       const res = await axios.get(
-        "https://inventory-managementsystem.herokuapp.com/api/user/category/getcategory",
+        "http://localhost:2222/api/user/category/getcategory",
         {
           headers: {
             "Access-Control-Allow-Origin": "*",
