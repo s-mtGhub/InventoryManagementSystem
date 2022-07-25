@@ -40,3 +40,4 @@ const NewCat = (props) => {
 };
 
 export default NewCat;
+    

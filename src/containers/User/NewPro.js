@@ -71,5 +71,5 @@ const NewPro = (props) => {
     </>
   );
 };
-
+     
 export default NewPro;

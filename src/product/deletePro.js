@@ -38,7 +38,8 @@ const DeletePro = (props) => {
         )
       )
         return;
-      link = "http://localhost:2222/api/user/remove/product";
+      link =
+        "https://inventory-managementsystem.herokuapp.com/api/user/remove/product";
       action = { _id: Pdata };
     }
     try {
@@ -75,13 +76,13 @@ const DeletePro = (props) => {
       <Layout>
         <Container className="profile-body">
           <div className="cat-actions profile-list">
-            <NavLink to="/user/update-product">
+            <NavLink className="prolink" to="/user/update-product">
               <div>Add New Product</div>
             </NavLink>
-            <NavLink to="/user/update-product/modify">
+            <NavLink className="prolink" to="/user/update-product/modify">
               <div>Modify Existing Product</div>
             </NavLink>
-            <NavLink to="/user/update-product/delete">
+            <NavLink className="prolink" to="/user/update-product/delete">
               <div>Delete Product</div>
             </NavLink>
           </div>

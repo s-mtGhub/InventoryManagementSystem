@@ -39,7 +39,7 @@ const ProBody = (props) => {
     let user = JSON.parse(usrdata);
     try {
       let res = await axios.post(
-        "http://localhost:2222/api/user/create/product",
+        "https://inventory-managementsystem.herokuapp.com/api/user/create/product",
         {
           name: name,
           price: price,

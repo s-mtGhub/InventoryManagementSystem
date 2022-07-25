@@ -15,10 +15,10 @@ const ModifyPro=(props)=>{
         
     try {
         const res = await axios.post(
-          "http://localhost:2222/api/user/product",
+          "https://inventory-managementsystem.herokuapp.com/api/user/product",
           {
-            "_id": props.Pdata,
-          },   
+            _id: props.Pdata,
+          },
           {
             headers: {
               Authorization: `Bearer ${user.value.token}`,
@@ -63,18 +63,8 @@ useEffect(()=>{
               Pdata={props.Pdata}
               setpr={props.setpr}
             />
-            {/* <ProAdd
-              id={2}
-              Cdata={props.Cdata}
-              setc={props.setc}
-              setpr={props.setpr}
-              Pdata={props.Pdata}
-            /> */}
             <label>Choose Product</label>
             <ProductList _id={props.Cdata} setpr={props.setpr} />
-            {/* <Button variant="primary" onClick={prosub2}>
-              Next
-            </Button> */}
           </div>
         </>
       </>
@@ -83,22 +73,3 @@ useEffect(()=>{
 }
 
 export default ModifyPro;
-{/* <div style={{ display: display ? "none" : "block" }}>
-  <NewPro
-    id={2}
-    name={props.product.name}
-    setn={props.setn}
-    price={props.product.price}
-    setp={props.setp}
-    quantity={props.product.quantity}
-    setq={props.setq}
-    desc={props.product.description}
-    setdesc={props.setdesc}
-    setd={props.setd}
-    image={props.product.image}
-    seti={props.seti}
-    fun={props.prosub3}
-    product={props.product}
-    btn="Update"
-  />
-</div> */}

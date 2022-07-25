@@ -34,16 +34,19 @@ const Setpassword=()=>{
 
   const setPass=()=>{
 axios
-  .post(`http://localhost:2222/api/user/forgotpassword/${id}/${token}`, {
-    "password": `${password}`,
-    "confirmPassword": `${confirmPassword}`,
-  })
+  .post(
+    `https://inventory-managementsystem.herokuapp.com/api/user/forgotpassword/${id}/${token}`,
+    {
+      password: `${password}`,
+      confirmPassword: `${confirmPassword}`,
+    }
+  )
   .then((res) => {
     if (res.status < 300) {
       console.log(res.data);
       setmess("Password has been changed");
       window.alert("Password has been changed");
-    //   window.location.replace("/");
+      //   window.location.replace("/");
     } else {
       console.log("password not changed");
       setmess(res.data.message);

@@ -18,7 +18,7 @@ const CategoryList=(props)=>{
         setval();
        try {
          const res = await axios.get(
-           "http://localhost:2222/api/user/category/getcategory"
+           "https://inventory-managementsystem.herokuapp.com/api/user/category/getcategory"
          );
 
          if (res.status < 300) {

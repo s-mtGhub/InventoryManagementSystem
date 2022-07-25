@@ -27,9 +27,12 @@ export default function ResetPassword(props){
    const sendMail=()=>{
       
     axios
-      .post("http://localhost:2222/api/user/sendresetpasswrodlink", {
-        "email": `${email}`,
-      })
+      .post(
+        "https://inventory-managementsystem.herokuapp.com/api/user/sendresetpasswrodlink",
+        {
+          email: `${email}`,
+        }
+      )
       .then((res) => {
         if (res.status < 300) {
           console.log(res.data);
@@ -47,7 +50,6 @@ export default function ResetPassword(props){
         console.log(error);
         if (error.response) {
           setmessfun(error.response);
-         
         }
       });  
   };

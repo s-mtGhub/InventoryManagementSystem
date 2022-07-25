@@ -67,7 +67,7 @@ const UpdatePro = (props) => {
     if (!window.confirm("Are you sure to update Product")) return;
     try {
       let res = await axios.post(
-        "http://localhost:2222/api/user/update/product",
+        "https://inventory-managementsystem.herokuapp.com/api/user/update/product",
         {
           _id: Pdata,
           name: name,
@@ -109,13 +109,13 @@ const UpdatePro = (props) => {
       <Layout>
         <Container className="profile-body">
           <div className="cat-actions profile-list">
-            <NavLink to="/user/update-product">
+            <NavLink className="prolink" to="/user/update-product">
               <div>Add New Product</div>
             </NavLink>
-            <NavLink to="/user/update-product/modify">
+            <NavLink className="prolink" to="/user/update-product/modify">
               <div>Modify Existing Product</div>
             </NavLink>
-            <NavLink to="/user/update-product/delete">
+            <NavLink className="prolink" to="/user/update-product/delete">
               <div>Delete Product</div>
             </NavLink>
           </div>
@@ -145,7 +145,9 @@ const UpdatePro = (props) => {
                       </Button>
                     </div>
                     <div style={{ display: display ? "none" : "block" }}>
-                      <h3 style={{ color: "red",textTransform:"capitalize" }}>{mess}</h3>
+                      <h3 style={{ color: "red", textTransform: "capitalize" }}>
+                        {mess}
+                      </h3>
                       <NewPro
                         id={2}
                         name={name}

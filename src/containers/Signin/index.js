@@ -40,15 +40,17 @@ export default function Signin(props) {
 
   const LoginSub = () => {
     axios
-      .post("http://localhost:2222/api/user/login", {
-        email: `${email}`,
-        password: `${password}`,
-      })
+      .post(
+        "https://inventory-managementsystem.herokuapp.com/api/user/login",
+        {
+          email: `${email}`,
+          password: `${password}`,
+        }
+      )
       .then((res) => {
         // console.log(res);
         if (res.status < 300) {
-
-          setWithExpiry('User',res.data,21600000);
+          setWithExpiry("User", res.data, 21600000);
         } else {
           console.log("failed Login");
           setmess(res.data.message);
@@ -59,12 +61,13 @@ export default function Signin(props) {
         console.log(res.rsponse);
       })
       .catch((error) => {
-        if (error.response) {  
-          setmess(error.response.data.error);
-          if (error.response.status >= 300 && error.response.status < 400) {
-            setmess(error.response.data.message);
+        let data=error.response.data;
+        if (data.message) 
+          setmess(data.message);
+         else{
+            setmess(data.error);
           }
-        }
+        
       });  
   };
 
@@ -107,6 +110,6 @@ export default function Signin(props) {
           </Col>
         </Row>
       </Container>
-    </Layout>
+    </Layout>   
   );
 }

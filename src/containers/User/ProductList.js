@@ -15,7 +15,7 @@ const ProductList=(props)=>{
       setpval();
       try {
         const res = await axios.post(
-          "http://localhost:2222/api/user/list/product",
+          "https://inventory-managementsystem.herokuapp.com/api/user/list/product",
           {
             _id: id,
           }

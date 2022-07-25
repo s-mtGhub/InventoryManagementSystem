@@ -35,3 +35,4 @@ const UpdateProduct = (props) => {
   );
 };
 export default UpdateProduct;
+    

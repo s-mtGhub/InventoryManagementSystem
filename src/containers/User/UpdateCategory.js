@@ -33,3 +33,4 @@ const UpdateCategory = (props) => {
     )
 };
 export default UpdateCategory;
+    

@@ -33,8 +33,9 @@ const showPro=async(id,indx)=>{
         try{
             if(!catOP)return;
            const res = await axios.post(
-             "http://localhost:2222/api/user/list/product",{
-                "_id":id
+             "https://inventory-managementsystem.herokuapp.com/api/user/list/product",
+             {
+               _id: id,
              }
            );
            if(res.status<300){

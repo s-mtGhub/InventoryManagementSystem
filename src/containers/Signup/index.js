@@ -37,15 +37,18 @@ export default function Signup() {
 
   const RegisterSub = async () => {
     axios
-      .post("http://localhost:2222/api/user/register", {
-        firstname: `${firstname}`,
-        lastname: `${lastname}`,
-        email: `${email}`,
-        password: `${password}`,
-        password_confirmation: `${confirmpassword}`,
-        username: `${username}`,
-        contact: `${contact}`,
-      })
+      .post(
+        "https://inventory-managementsystem.herokuapp.com/api/user/register",
+        {
+          firstname: `${firstname}`,
+          lastname: `${lastname}`,
+          email: `${email}`,
+          password: `${password}`,
+          password_confirmation: `${confirmpassword}`,
+          username: `${username}`,
+          contact: `${contact}`,
+        }
+      )
       .then((res) => {
         if (res.status < 300) {
           console.log("registered succesfully");
