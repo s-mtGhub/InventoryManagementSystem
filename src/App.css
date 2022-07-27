@@ -160,7 +160,7 @@ list-style:none;
   cursor:auto;
 }
 .products li:hover{
-  cursor: pointer;
+  /* cursor: pointer; */
   background-color: rgb(231, 171, 171);
   color: rgb(40, 40, 196);
 }

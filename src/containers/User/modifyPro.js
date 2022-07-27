@@ -15,7 +15,7 @@ const ModifyPro=(props)=>{
         
     try {
         const res = await axios.post(
-          "http://localhost:2222/api/user/product",
+          "https://inventory-managementsystem.herokuapp.com/api/user/product",
           {
             _id: props.Pdata,
           },
@@ -46,7 +46,6 @@ const prosub2=()=>{
       window.alert("Their is not such a product");
       return;
   }
-//    props.setdis(!props.display);
    props.funp();
 }
 

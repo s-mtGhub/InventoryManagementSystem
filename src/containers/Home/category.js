@@ -4,7 +4,7 @@ import Product from "./product";
 import "../../App.css"
 const Category = (props) => {
     
-    const [Id,setId]=useState();
+    const [Id,setId]=useState(0);
    const [catOP, setcatOP] = useState(false);
    const [PList,setPro]=useState([])
    const setProfun=(data)=>{
@@ -33,7 +33,7 @@ const showPro=async(id,indx)=>{
         try{
             if(!catOP)return;
            const res = await axios.post(
-             "http://localhost:2222/api/user/list/product",
+             "https://inventory-managementsystem.herokuapp.com/api/user/list/product",
              {
                _id: id,
              },
@@ -55,6 +55,7 @@ const showPro=async(id,indx)=>{
         }
     }
 
+ 
   return (     
     <>
       <div className="cat-list">
@@ -67,8 +68,7 @@ const showPro=async(id,indx)=>{
                 {catOP && Id == CP._id ? (
                   <div className="products">
                     <Product data={PList} display={catOP} 
-                    // pdata={props.pdata}
-                      // setp={props.setp}
+                    
                     />
                   </div>
                 ) : null}

@@ -35,7 +35,7 @@ const Setpassword=()=>{
   const setPass=()=>{
 axios
   .post(
-    `http://localhost:2222/api/user/forgotpassword/${id}/${token}`,
+    `https://inventory-managementsystem.herokuapp.com/api/user/forgotpassword/${id}/${token}`,
     {
       password: `${password}`,
       confirmPassword: `${confirmPassword}`,

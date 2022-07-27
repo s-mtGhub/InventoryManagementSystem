@@ -29,7 +29,6 @@ function App() {
     }
     const item = JSON.parse(itemStr);
 
-    // console.log(item.value);
     const now = new Date();
     // compare the expiry time of the item with the current time
     if (now.getTime() > item.expiry) {

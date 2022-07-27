@@ -8,7 +8,6 @@ import axios from "axios";
 
 export default function Signin(props) {
   const [mess, setmess] = useState("");
-  // const [Log, setlog] = useState([]);
   let navigate=useNavigate();
   const [email, setemail] = useState("");
   const [password, setpass] = useState("");
@@ -41,7 +40,7 @@ export default function Signin(props) {
   const LoginSub = () => {
     axios
       .post(
-        "http://localhost:2222/api/user/login",
+        "https://inventory-managementsystem.herokuapp.com/api/user/login",
         {
           email: `${email}`,
           password: `${password}`,

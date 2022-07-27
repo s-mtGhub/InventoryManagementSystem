@@ -38,7 +38,7 @@ const CatBody = (props) => {
     let user = JSON.parse(usrdata);
     try {
       let res = await axios.post(
-        "http://localhost:2222/api/user/create/category",
+        "https://inventory-managementsystem.herokuapp.com/api/user/create/category",
         {
           name: `${name}`,
           createdBy: `${user.value.user_data._id}`,

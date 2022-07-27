@@ -12,13 +12,12 @@ const CategoryList=(props)=>{
     const setval=()=> {
         if(nameInput.value)
         props.setc(nameInput.value);
-        // if(props.id==3)
     };
     const temp = async () => {
         setval();
        try {
          const res = await axios.get(
-           "http://localhost:2222/api/user/category/getcategory",
+           "https://inventory-managementsystem.herokuapp.com/api/user/category/getcategory",
            {
              headers: {
                "Access-Control-Allow-Origin": "*",
@@ -30,8 +29,6 @@ const CategoryList=(props)=>{
          if (res.status < 300) {
            if (res.data) {
              setfun(res.data);
-            //  if(props.id==3)
-            //  temppro(nameInput.value);
            }
          } else {
            console.log("category not fetched");

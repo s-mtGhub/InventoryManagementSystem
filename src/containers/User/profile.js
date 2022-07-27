@@ -58,7 +58,7 @@ const Profile = () => {
     let user = JSON.parse(usrdata);
     try {
       let res = await axios.post(
-        "http://localhost:2222/api/user/profileupdate",
+        "https://inventory-managementsystem.herokuapp.com/api/user/profileupdate",
         {
           firstname: firstname,
           lastname: lastname,
@@ -122,7 +122,7 @@ const Profile = () => {
     let user = JSON.parse(usrdata);
     try {
       let res = await axios.post(
-        "http://localhost:2222/api/user/changepassword",
+        "https://inventory-managementsystem.herokuapp.com/api/user/changepassword",
         {
           password: password,
           newPassword: confirmpassword,
